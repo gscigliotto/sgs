@@ -1,0 +1,160 @@
+﻿@{
+    Layout = null;
+}
+
+<section id="widget-grid" class="">
+    <article class="col-xs-12 col-sm-6 col-md-6 col-lg-12">
+        <div class="jarviswidget" id="wid-id-100" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-custombutton="false" data-widget-collapsed="false" data-widget-sortable="false">
+
+            <header role="heading">
+                <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+                <h2>{{operation}}</h2>
+            </header>
+            <div role="content">
+                <div class="widget-body">
+                    <form class="form-horizontal" novalidate="novalidate" role="form" id="clientesForm" name="clientesForm">
+                        <fieldset>
+                            <legend>Datos básicos</legend>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Razón social</label>
+                                <div class="col-md-10">
+                                    <input class="form-control default-control" type="text" name="razonSocial" ng-model="entity.razonSocial">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Nombre comercial</label>
+                                <div class="col-md-10">
+                                    <input class="form-control default-control" type="text" name="nombreComercial" ng-model="entity.nombreComercial">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Teléfono</label>
+                                <div class="col-md-10">
+                                    <input class="form-control default-control" type="text" name="telefono" ng-model="entity.telefono">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Email</label>
+                                <div class="col-md-10">
+                                    <input class="form-control default-control" type="text" name="email" ng-model="entity.email">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Cuit</label>
+                                <div class="col-md-10">
+                                    <input class="form-control default-control" type="text" name="cuit" ng-model="entity.cuit" ui-mask="99-99999999-9">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Página web</label>
+                                <div class="col-md-10">
+                                    <input class="form-control default-control" type="text" name="paginaWeb" ng-model="entity.paginaWeb">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Contacto comercial</legend>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Nombre</label>
+                                <div class="col-md-10">
+                                    <input class="form-control default-control" type="text" name="nombreContactoComercial" ng-model="entity.nombreContactoComercial">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Teléfono</label>
+                                <div class="col-md-10">
+                                    <input class="form-control default-control" type="text" name="telefonoContactoComercial" ng-model="entity.telefonoContactoComercial">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Email</label>
+                                <div class="col-md-10">
+                                    <input class="form-control default-control" type="text" name="emailContactoComercial" ng-model="entity.emailContactoComercial">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Contacto administrativo</legend>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Nombre</label>
+                                <div class="col-md-10">
+                                    <input class="form-control default-control" type="text" name="nombreContactoAdministrativo" ng-model="entity.nombreContactoAdministrativo">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Teléfono</label>
+                                <div class="col-md-10">
+                                    <input class="form-control default-control" type="text" name="telefonoContactoAdministrativo" ng-model="entity.telefonoContactoAdministrativo">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Email</label>
+                                <div class="col-md-10">
+                                    <input class="form-control default-control" type="text" name="emailContactoAdministrativo" ng-model="entity.emailContactoAdministrativo">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Contacto técnico</legend>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Nombre</label>
+                                <div class="col-md-10">
+                                    <input class="form-control default-control" type="text" name="nombreContactoTecnico" ng-model="entity.nombreContactoTecnico">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Teléfono</label>
+                                <div class="col-md-10">
+                                    <input class="form-control default-control" type="text" name="telefonoContactoTecnico" ng-model="entity.telefonoContactoTecnico">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Email</label>
+                                <div class="col-md-10">
+                                    <input class="form-control default-control" type="text" name="emailContactoTecnico" ng-model="entity.emailContactoTecnico">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                        </fieldset>
+
+
+                        <div class="alert alert-danger fade in" ng-show="result.hasErrors">
+                            <i class="fa-fw fa fa-times"></i>
+                            {{result.messages[0]}}
+                        </div>
+
+                        <div class="form-actions">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button class="btn btn-primary" type="submit">
+                                        <i class="fa fa-save"></i>
+                                        Guardar
+                                    </button>
+                                    <button class="btn btn-default" ng-click="list()">
+                                        Volver
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+

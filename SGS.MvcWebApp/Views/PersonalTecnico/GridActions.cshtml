@@ -1,0 +1,11 @@
+﻿@*<div class="grid-actions">
+    <span alt="Imprimir" title="Imprimir" ng-show="row.entity.tipoTransaccion == 'Cheque'" class=" label label-success cursor" ng-click="printCheque(row.entity.id)">Imprimir</span>
+    <span alt="Editar" title="Editar" class="label label-default cursor" ng-click="edit(row.entity.id)">Editar</span>
+    <img alt="Anular transacción" ng-show="row.entity.conciliada == 'No' && row.entity.status == 'Activa'" title="Anular transacción" src="@Url.Content("~/Content/images/remove.png")" ng-click="disableTransaccion(row.entity)" class="cursor" />
+</div>*@
+
+<div class="btn-group" style="padding: 2px 0 0 5px;">
+    <button type="button" title="Editar" class="btn btn-default" ng-click="edit(row.entity.id)" style="padding: 2px 5px;">
+        <i class="fa fa-edit"></i>        
+    </button>
+</div>

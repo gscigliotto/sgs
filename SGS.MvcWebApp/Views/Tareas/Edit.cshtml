@@ -1,0 +1,92 @@
+﻿@{
+    Layout = null;
+}
+
+<section id="widget-grid" class="">
+    <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="jarviswidget" id="wid-id-100" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-custombutton="false" data-widget-collapsed="false" data-widget-sortable="false">
+
+            <header role="heading">
+                <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+                <h2>{{operation}}</h2>
+            </header>
+            <div role="content">
+                <div class="widget-body">
+                    <form class="form-horizontal" novalidate="novalidate" role="form" id="tareasForm" name="tareasForm">
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Título</label>
+                                <div class="col-md-10">
+                                    <input class="form-control " type="text" name="titulo" ng-model="entity.titulo" >
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Prioridad</label>
+                                <div class="col-md-10">
+                                    <select name="prioridad" ng-model="entity.prioridad" ng-options="prioridad for prioridad in prioridades" class="form-control " >
+                                        <option value=""></option>
+                                    </select>
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Usuario asignado</label>
+                                <div class="col-md-10">
+                                    <select name="usuarioId" ng-model="entity.usuarioId" ng-options="usuario.id as usuario.nick for usuario in usuarios" class="form-control " >
+                                        <option value=""></option>
+                                    </select>
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group" ng-show="entity.id">
+                                <label class="col-md-2 control-label">Estado</label>
+                                <div class="col-md-10">
+                                    <select name="estadoTarea" ng-model="entity.estadoTarea" ng-options="estadoTarea for estadoTarea in estadosTarea" class="form-control " >
+                                        <option value=""></option>
+                                    </select>
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Fecha vencimiento</label>
+                                <div class="col-md-10">
+                                    <input type="text" name="fechaVencimiento" ng-model="entity.fechaVencimiento" data-date-format="dd/mm/yyyy" bs-datepicker class="form-control "  />
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Descripción</label>
+                                <div class="col-md-10">
+                                    <textarea class="form-control " name="descripcion" ng-model="entity.descripcion" ></textarea>
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+
+                        </fieldset>
+
+                        <div class="alert alert-danger fade in" ng-show="result.hasErrors">
+                            <i class="fa-fw fa fa-times"></i>
+                            {{result.messages[0]}}
+                        </div>
+
+                        <div class="form-actions">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button class="btn btn-primary" type="submit" >
+                                        <i class="fa fa-save"></i>
+                                        Guardar
+                                    </button>
+                                    <button class="btn btn-default" ng-click="list()">
+                                        Volver
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+

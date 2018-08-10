@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title> SGS </title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Use the correct meta names below for your web application
+         Ref: http://davidbcalhoun.com/2010/viewport-metatag-->
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    @Styles.Render("~/Content/css/styles")
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" href="@Url.Content("~/content/img/favicon/favicon.ico")" type="image/x-icon">
+    <link rel="icon" href="@Url.Content("~/content/img/favicon/favicon.ico")" type="image/x-icon">
+    <!-- GOOGLE FONT -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+</head>
+<body class="">
+    <!-- HEADER -->
+    <header id="header">
+        <div id="logo-group">
+            <span id="logo"> <img src="@Url.Content("~/content/img/logo.png")" alt="SmartAdmin">  </span>  
+            
+            @{Html.RenderAction("TareasCurrentUser", "Tareas");}
+                    
+         
+        </div>
+        <div class="pull-right">
+            <!-- collapse menu button -->
+            <div id="hide-menu" class="btn-header pull-right">
+                <span> <a href="javascript:void(0);" title="Collapse Menu"><i class="fa fa-reorder"></i></a> </span>
+            </div>
+            <!-- end collapse menu -->
+            <!-- logout button -->
+            <div id="logout" class="btn-header transparent pull-right">
+                <span> <a href="@Url.Action("LogOff", "Account")" title="Sign Out"><i class="fa fa-sign-out"></i></a> </span>
+            </div>
+
+
+            <div id="changePassword" class="btn-header transparent pull-right" data-toggle="modal" data-target="#changePasswordModal">
+                <span> <a href="javascript:void(0)" title="Modificar contraseña"><i class="fa fa-pencil"></i></a> </span>
+            </div>
+        </div>
+    </header>
+    <!-- END HEADER -->  
+    <aside id="left-panel">
+
+        <!-- User info -->
+        <div class="login-info">
+            <span>
+                <!-- User image size is adjusted inside CSS, it should stay as it -->
+
+                <a href="javascript:void(0);" id="show-shortcut">
+                    @*<img src="@Url.Content("~/content/img/avatars/sunny.png")" alt="me" class="online" />*@
+                    <span>
+                        @User.Identity.Name
+                    </span>
+                    <i class="fa fa-angle-down"></i>
+                </a>
+
+            </span>
+        </div>
+        <!-- end user info -->
+        <!-- NAVIGATION : This navigation is also responsive
+
+        To make this navigation dynamic please make sure to link the node
+        (the reference to the nav > ul) after page load. Or the navigation
+        will not initialize.
+        -->
+        <nav>
+            @Html.MvcSiteMap().Menu(false)          
+        </nav>
+        <span class="minifyme"> <i class="fa fa-arrow-circle-left hit"></i> </span>
+
+    </aside>
+    <!-- END NAVIGATION -->
+    <!-- MAIN PANEL -->
+    <div id="main" role="main">
+
+        <!-- RIBBON -->
+        <div id="ribbon">
+
+            <!-- breadcrumb -->
+            @*<ol class="breadcrumb">
+                <li>Home</li>
+                <li>Dashboard</li>
+            </ol>*@
+            @Html.MvcSiteMap().SiteMapPath()
+            <!-- end breadcrumb -->           
+
+        </div>
+        <!-- END RIBBON -->
+        <!-- MAIN CONTENT -->
+        <div id="content">
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+                    <h1 class="page-title txt-color-blueDark">
+                        @*<i class="fa-fw fa fa-home"></i> Dashboard <span>> My Dashboard</span>*@
+                        @Html.MvcSiteMap().SiteMapTitle()
+                    </h1>
+                </div>
+            </div>
+
+            @RenderBody()
+        </div>
+        <!-- END MAIN CONTENT -->
+
+    </div>
+
+    <div id="shortcut">
+        <ul>
+            <li>
+                <a href="#inbox.html" class="jarvismetro-tile big-cubes bg-color-blue"> <span class="iconbox"> <i class="fa fa-envelope fa-4x"></i> <span>Mail <span class="label pull-right bg-color-darken">14</span></span> </span> </a>
+            </li>
+            <li>
+                <a href="#calendar.html" class="jarvismetro-tile big-cubes bg-color-orangeDark"> <span class="iconbox"> <i class="fa fa-calendar fa-4x"></i> <span>Calendar</span> </span> </a>
+            </li>
+            <li>
+                <a href="#gmap-xml.html" class="jarvismetro-tile big-cubes bg-color-purple"> <span class="iconbox"> <i class="fa fa-map-marker fa-4x"></i> <span>Maps</span> </span> </a>
+            </li>
+            <li>
+                <a href="#invoice.html" class="jarvismetro-tile big-cubes bg-color-blueDark"> <span class="iconbox"> <i class="fa fa-book fa-4x"></i> <span>Invoice <span class="label pull-right bg-color-darken">99</span></span> </span> </a>
+            </li>
+            <li>
+                <a href="#gallery.html" class="jarvismetro-tile big-cubes bg-color-greenLight"> <span class="iconbox"> <i class="fa fa-picture-o fa-4x"></i> <span>Gallery </span> </span> </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);" class="jarvismetro-tile big-cubes selected bg-color-pinkDark"> <span class="iconbox"> <i class="fa fa-user fa-4x"></i> <span>My Profile </span> </span> </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="width: 460px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Modificar contraseña</h4>
+                </div>
+                <div class="modal-body no-padding">
+                    @using (Html.BeginForm("ChangePassword", "Account", FormMethod.Post, new { id = "login-form", ReturnUrl = ViewBag.ReturnUrl, Class = "smart-form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <fieldset>
+                            <section>
+                                <label>Contraseña Actual</label>
+                                <label class="input">
+                                    <i class="icon-append fa fa-lock"></i>
+                                    <input type="password" />
+                                    <b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i> Ingrese su contraseña actual</b>
+                                </label>
+                            </section>
+                            <section>
+                                <label>Nueva contraseña</label>
+                                <label class="input">
+                                    <i class="icon-append fa fa-lock"></i>
+                                    <input type="password" />
+                                    <b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i> Ingrese una nueva contraseña</b>
+                                </label>
+                            </section>
+                            <section>
+                                <label>Repita contraseña</label>
+                                <label class="input">
+                                    <i class="icon-append fa fa-lock"></i>
+                                    <input type="password" />
+                                    <b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i> Repita la contraseña</b>
+                                </label>
+                            </section>
+                            <section>
+                                @Html.ValidationSummary(true)
+                            </section>
+                        </fieldset>
+                        <footer>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">
+                                Cancelar
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                Aceptar
+                            </button>
+                        </footer>
+                    }
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+    @Scripts.Render("~/bundles/scripts/basicScripts")
+    @*@Scripts.Render("~/bundles/scripts/appScripts")*@
+    
+    <script type="text/javascript" src="@Url.Content("~/Scripts/angularJs/angular-v1.2.2.min.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/angularJs/angular-route.min.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/angularJs/ng-grid-2.0.7.min.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/angularJs/angular-strap.min.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/angularJs/angular-sanitize.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/angularJs/ui-utils.min.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/shared/filters.js")"> </script>
+
+
+    @RenderSection("Scripts", required: false)
+
+    <script>
+        $(document).ready(function () {            
+            pageSetUp();                     
+        });
+    </script>   
+</body>
+</html>

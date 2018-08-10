@@ -1,0 +1,121 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{AA02D2F5-5ACE-4099-9C13-4C47C3D91702}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{0EA34156-B898-4A27-881D-87AFE54AA241}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{0E188FC5-47A0-4AB6-A2E5-D9FE50A1A051}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGS.Dtos", "SGS.Dtos\SGS.Dtos.csproj", "{206A0876-0737-491F-99D3-4D01263A4D0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGS.Infrastructure", "SGS.Infrastructure\SGS.Infrastructure.csproj", "{71FD805C-E9F8-40CE-8DE4-31AA0F5810F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGS.BusinessLogic", "SGS.BusinessLogic\SGS.BusinessLogic.csproj", "{73F61201-CB8E-41EA-AFD8-D6CB4F31DC77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGS.EFRepository", "SGS.EFRepository\SGS.EFRepository.csproj", "{91CA0885-0FB1-47BB-847A-C40A34AE1382}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGS.Entities", "SGS.Entities\SGS.Entities.csproj", "{4F617951-2932-452C-A956-897E32936B10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGS.MvcWebApp", "SGS.MvcWebApp\SGS.MvcWebApp.csproj", "{32C5A06E-517D-4432-AB4D-B0218E8AED6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{0EB1EFA8-9BE1-4867-9629-E4F33A7E90C5}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClienteApiGoogle", "ClienteApiGoogle\ClienteApiGoogle.csproj", "{62A846C9-0EF5-470C-BB37-F7A105ED6712}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClienteImpresora", "ClienteImpresora\ClienteImpresora.csproj", "{09994A10-CA34-4A13-80F5-92BC66A39F53}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://pablozabo.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SGS.Dtos\\SGS.Dtos.csproj
+		SccProjectTopLevelParentUniqueName1 = SGS.sln
+		SccProjectName1 = SGS.Dtos
+		SccLocalPath1 = SGS.Dtos
+		SccProjectUniqueName2 = SGS.Infrastructure\\SGS.Infrastructure.csproj
+		SccProjectTopLevelParentUniqueName2 = SGS.sln
+		SccProjectName2 = SGS.Infrastructure
+		SccLocalPath2 = SGS.Infrastructure
+		SccProjectUniqueName3 = SGS.BusinessLogic\\SGS.BusinessLogic.csproj
+		SccProjectTopLevelParentUniqueName3 = SGS.sln
+		SccProjectName3 = SGS.BusinessLogic
+		SccLocalPath3 = SGS.BusinessLogic
+		SccProjectUniqueName4 = SGS.EFRepository\\SGS.EFRepository.csproj
+		SccProjectTopLevelParentUniqueName4 = SGS.sln
+		SccProjectName4 = SGS.EFRepository
+		SccLocalPath4 = SGS.EFRepository
+		SccProjectUniqueName5 = SGS.Entities\\SGS.Entities.csproj
+		SccProjectTopLevelParentUniqueName5 = SGS.sln
+		SccProjectName5 = SGS.Entities
+		SccLocalPath5 = SGS.Entities
+		SccProjectUniqueName6 = SGS.MvcWebApp\\SGS.MvcWebApp.csproj
+		SccProjectTopLevelParentUniqueName6 = SGS.sln
+		SccProjectName6 = SGS.MvcWebApp
+		SccLocalPath6 = SGS.MvcWebApp
+		SccProjectUniqueName7 = ClienteApiGoogle\\ClienteApiGoogle.csproj
+		SccProjectName7 = ClienteApiGoogle
+		SccLocalPath7 = ClienteApiGoogle
+		SccProjectUniqueName8 = ClienteImpresora\\ClienteImpresora.csproj
+		SccProjectName8 = ClienteImpresora
+		SccLocalPath8 = ClienteImpresora
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{206A0876-0737-491F-99D3-4D01263A4D0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{206A0876-0737-491F-99D3-4D01263A4D0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{206A0876-0737-491F-99D3-4D01263A4D0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{206A0876-0737-491F-99D3-4D01263A4D0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71FD805C-E9F8-40CE-8DE4-31AA0F5810F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71FD805C-E9F8-40CE-8DE4-31AA0F5810F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71FD805C-E9F8-40CE-8DE4-31AA0F5810F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71FD805C-E9F8-40CE-8DE4-31AA0F5810F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73F61201-CB8E-41EA-AFD8-D6CB4F31DC77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73F61201-CB8E-41EA-AFD8-D6CB4F31DC77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73F61201-CB8E-41EA-AFD8-D6CB4F31DC77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73F61201-CB8E-41EA-AFD8-D6CB4F31DC77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91CA0885-0FB1-47BB-847A-C40A34AE1382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91CA0885-0FB1-47BB-847A-C40A34AE1382}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91CA0885-0FB1-47BB-847A-C40A34AE1382}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91CA0885-0FB1-47BB-847A-C40A34AE1382}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F617951-2932-452C-A956-897E32936B10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F617951-2932-452C-A956-897E32936B10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F617951-2932-452C-A956-897E32936B10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F617951-2932-452C-A956-897E32936B10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32C5A06E-517D-4432-AB4D-B0218E8AED6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32C5A06E-517D-4432-AB4D-B0218E8AED6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32C5A06E-517D-4432-AB4D-B0218E8AED6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32C5A06E-517D-4432-AB4D-B0218E8AED6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62A846C9-0EF5-470C-BB37-F7A105ED6712}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62A846C9-0EF5-470C-BB37-F7A105ED6712}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62A846C9-0EF5-470C-BB37-F7A105ED6712}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62A846C9-0EF5-470C-BB37-F7A105ED6712}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09994A10-CA34-4A13-80F5-92BC66A39F53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09994A10-CA34-4A13-80F5-92BC66A39F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09994A10-CA34-4A13-80F5-92BC66A39F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09994A10-CA34-4A13-80F5-92BC66A39F53}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{32C5A06E-517D-4432-AB4D-B0218E8AED6A} = {AA02D2F5-5ACE-4099-9C13-4C47C3D91702}
+		{206A0876-0737-491F-99D3-4D01263A4D0D} = {0EA34156-B898-4A27-881D-87AFE54AA241}
+		{71FD805C-E9F8-40CE-8DE4-31AA0F5810F0} = {0EA34156-B898-4A27-881D-87AFE54AA241}
+		{73F61201-CB8E-41EA-AFD8-D6CB4F31DC77} = {0E188FC5-47A0-4AB6-A2E5-D9FE50A1A051}
+		{91CA0885-0FB1-47BB-847A-C40A34AE1382} = {0E188FC5-47A0-4AB6-A2E5-D9FE50A1A051}
+		{4F617951-2932-452C-A956-897E32936B10} = {0E188FC5-47A0-4AB6-A2E5-D9FE50A1A051}
+	EndGlobalSection
+EndGlobal

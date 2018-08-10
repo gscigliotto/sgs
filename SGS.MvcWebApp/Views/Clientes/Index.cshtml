@@ -1,0 +1,17 @@
+﻿@{
+}
+
+<div id="clientes" ng-app="sgs.clientes">
+    @RenderPage(Url.Content("~/Views/Clientes/Bundle.cshtml"))
+    <div ng-view></div>
+</div>
+@section scripts{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/clientes/clientesModule.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/clientes/clientesListCtrl.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/clientes/clientesEditCtrl.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/clientes/navigationService.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/clientes/clientesValidationService.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/shared/clientesService.js")"> </script>
+}
+
+

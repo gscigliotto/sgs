@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>SGS</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Use the correct meta names below for your web application
+             Ref: http://davidbcalhoun.com/2010/viewport-metatag
+    -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    @Styles.Render("~/Content/css/styles")
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" href="@Url.Content("~/content/img/favicon/favicon.ico")" type="image/x-icon">
+    <link rel="icon" href="@Url.Content("~/content/img/favicon/favicon.ico")" type="image/x-icon">
+    <!-- GOOGLE FONT -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+</head>
+<body id="login" class="">
+    <header id="header">
+        <div id="logo-group">
+            <span id="logo"> <img src="@Url.Content("~/Content/img/logo.png")" alt="SmartAdmin"> </span>
+        </div>
+
+        <span id="login-header-space"> </span>
+    </header>   
+    @Scripts.Render("~/bundles/scripts/basicScripts")
+    <div id="main" role="main">
+        <!-- MAIN CONTENT -->
+        <div id="content" >
+
+            <div class="row">
+                @RenderBody()
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            pageSetUp();
+        });
+    </script>
+</body>
+</html>
+
+
+
+

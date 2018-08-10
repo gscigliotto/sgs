@@ -1,0 +1,45 @@
+﻿@model IList<SGS.Dtos.Tarea>
+
+
+@if (Model.Any())
+{
+    <span id="activity" class="activity-dropdown"> <i class="fa fa-user"></i> <b class="badge bg-color-red bounceIn animated"> @Model.Count </b> </span>
+
+    <div class="ajax-dropdown">          
+
+        <!-- notification content -->
+        <div class="ajax-notifications custom-scroll">
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 40px;">Id</th>
+                        <th>Título</th>
+                        <th>Prioridad</th>
+                        <th style="width: 100px;">F.vencimiento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var tarea in Model)
+                    {
+                        <tr>
+                            <td><a href="@string.Format("{0}#/edit/{1}", Url.Action("Index", "Tareas"), tarea.Id)">@tarea.Id</a></td>
+                            <td>@tarea.Titulo</td>
+                            <td>@tarea.Prioridad</td>
+                            <td>@tarea.FechaVencimiento.Value.ToString("dd/MM/yyyy")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+        <!-- end notification content -->
+        <!-- footer: refresh area -->
+        <span>
+           
+        </span>
+        <!-- end footer -->
+
+    </div>
+
+}

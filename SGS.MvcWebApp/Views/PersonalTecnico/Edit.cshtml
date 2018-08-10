@@ -1,0 +1,228 @@
+﻿@{
+    Layout = null;
+}
+
+<section id="widget-grid" class="">
+    <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="jarviswidget" id="wid-id-100" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-custombutton="false" data-widget-collapsed="false" data-widget-sortable="false">
+
+            <header role="heading">
+                <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+                <h2>{{operation}}</h2>
+            </header>
+            <div role="content">
+                <div class="widget-body">
+                    <form class="form-horizontal" novalidate="novalidate" role="form" id="ptForm" name="ptForm">
+                        <fieldset>
+                            <legend>Datos básicos</legend>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Nick</label>
+                                <div class="col-md-10">
+                                    <input class="form-control " type="text" name="nick" ng-model="entity.nick">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Nombre</label>
+                                <div class="col-md-10">
+                                    <input class="form-control " type="text" name="nombre" ng-model="entity.nombre">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Apellido</label>
+                                <div class="col-md-10">
+                                    <input class="form-control " type="text" name="apellido" ng-model="entity.apellido">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Documento</label>
+                                <div class="col-md-10">
+                                    <input class="form-control " type="text" name="documento" ng-model="entity.documento">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Email</label>
+                                <div class="col-md-10">
+                                    <input class="form-control " type="text" name="email" ng-model="entity.email">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Email alternativo</label>
+                                <div class="col-md-10">
+                                    <input class="form-control " type="text" name="emailAlternativo" ng-model="entity.emailAlternativo">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Celular</label>
+                                <div class="col-md-10">
+                                    <input class="form-control " type="text" name="celular" ng-model="entity.celular">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Teléfono</label>
+                                <div class="col-md-10">
+                                    <input class="form-control " type="text" name="telefono" ng-model="entity.telefono">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Teléfono de urgencia</label>
+                                <div class="col-md-10">
+                                    <input class="form-control " type="text" name="telefonoUrgencia" ng-model="entity.telefonoUrgencia">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Activo</label>
+                                <div class="col-md-3">
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" ng-model="entity.enabled">
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Domicilio</legend>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Calle</label>
+                                <div class="col-md-10">
+                                    <input class="form-control " type="text" name="calle" ng-model="entity.domicilio.calle">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Número</label>
+                                <div class="col-md-10">
+                                    <input class="form-control " type="text" name="numero" ng-model="entity.domicilio.numero">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Piso</label>
+                                <div class="col-md-10">
+                                    <input class="form-control " type="text" name="piso" ng-model="entity.domicilio.piso">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Dpto</label>
+                                <div class="col-md-10">
+                                    <input class="form-control " type="text" name="dpto" ng-model="entity.domicilio.dpto">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Provincia</label>
+                                <div class="col-md-10">
+                                    <select name="provincia" ng-model="entity.domicilio.provinciaId" ng-options="provincia.id as provincia.nombre for provincia in provincias" class="form-control ">
+                                        <option value=""></option>
+                                    </select>
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Localidad</label>
+                                <div class="col-md-10">
+                                    <select name="localidad" ng-model="entity.domicilio.localidadId" ng-options="localidad.id as localidad.nombre for localidad in localidades" class="form-control ">
+                                        <option value=""></option>
+                                    </select>
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Información laboral</legend>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Cuit</label>
+                                <div class="col-md-10">
+                                    <input class="form-control " type="text" id="cuit" name="cuit" ng-model="entity.cuit" ui-mask="99-99999999-9" />
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Fecha alta Afip</label>
+                                <div class="col-md-10">
+                                    <input type="text" name="fechaAltaAfip" ng-model="entity.fechaAltaAfip" data-date-format="dd/mm/yyyy" bs-datepicker class="form-control " />
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Cargo</label>
+                                <div class="col-md-10">
+                                    <select name="cargo" ng-model="entity.cargo" ng-options="cargo for cargo in cargos" class="form-control ">
+                                        <option value=""></option>
+                                    </select>
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Categoría</label>
+                                <div class="col-md-10">
+                                    <select name="categoria" ng-model="entity.categoria" ng-options="categoria for categoria in categorias" class="form-control ">
+                                        <option value=""></option>
+                                    </select>
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Operador</label>
+                                <div class="col-md-3">
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" ng-model="entity.operador">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Art</label>
+                                <div class="col-md-10">
+                                    <input class="form-control " type="text" name="art" ng-model="entity.art">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Teléfono aseguradora</label>
+                                <div class="col-md-10">
+                                    <input class="form-control " type="text" name="telefonoAseguradora" ng-model="entity.telefonoAseguradora">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Poliza</label>
+                                <div class="col-md-10">
+                                    <input class="form-control " type="text" name="poliza" ng-model="entity.poliza">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div class="alert alert-danger fade in" ng-show="result.hasErrors">
+                            <i class="fa-fw fa fa-times"></i>
+                            {{result.messages[0]}}
+                        </div>
+
+                        <div class="form-actions">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button class="btn btn-primary" type="submit">
+                                        <i class="fa fa-save"></i>
+                                        Guardar
+                                    </button>
+                                    <button class="btn btn-default" ng-click="list()">
+                                        Volver
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+

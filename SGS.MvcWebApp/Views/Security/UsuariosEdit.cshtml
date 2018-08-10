@@ -1,0 +1,105 @@
+﻿@{
+    Layout = null;
+}
+
+<section id="widget-grid" class="">
+    <article class="col-xs-12 col-sm-6 col-md-6 col-lg-12">
+        <div class="jarviswidget" id="wid-id-1002" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-custombutton="false" data-widget-collapsed="false" data-widget-sortable="false">
+
+            <header role="heading">
+                <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+                <h2>{{operation}} </h2>
+            </header>
+            <div role="content">
+                <div class="widget-body">
+                    <form class="form-horizontal" novalidate="novalidate" role="form" id="usuarioForm">
+                        <fieldset>
+                            <legend>Datos básicos</legend>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Nick</label>
+                                <div class="col-md-10">
+                                    <input class="form-control default-control" type="text" name="nick" ng-model="entity.nick" >
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Nombre</label>
+                                <div class="col-md-10">
+                                    <input class="form-control default-control" type="text" name="nombre" ng-model="entity.nombre">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Apellido</label>
+                                <div class="col-md-10">
+                                    <input class="form-control default-control" type="text" name="apellido" ng-model="entity.apellido">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Documento</label>
+                                <div class="col-md-10">
+                                    <input class="form-control default-control" type="text" name="documento" ng-model="entity.documento">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Email</label>
+                                <div class="col-md-10">
+                                    <input class="form-control default-control" type="text" name="email" ng-model="entity.email">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Teléfono</label>
+                                <div class="col-md-10">
+                                    <input class="form-control default-control" type="text" name="telefono" ng-model="entity.telefono">
+                                    <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">Activo</label>
+                                <div class="col-md-3">
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" ng-model="entity.enabled">
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Roles</legend>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label"></label>
+                                <div class="col-md-10">
+                                    <label class="checkbox-inline" ng-repeat="rol in roles">                                       
+                                        <input type="checkbox" ng-checked="entity.roles.indexOf(rol.id) != -1" ng-click="toggleCheck(rol.id)" /> {{rol.nombre}}
+                                    </label>                                   
+                                </div>
+                            </div>
+                        </fieldset>
+                        
+                        <div class="alert alert-danger fade in" ng-show="result.hasErrors">
+                            <i class="fa-fw fa fa-times"></i>
+                            {{result.messages[0]}}
+                        </div>
+
+                        <div class="form-actions">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button class="btn btn-primary" type="submit">
+                                        <i class="fa fa-save"></i>
+                                        Guardar
+                                    </button>
+                                    <button class="btn btn-default" ng-click="list()">
+                                        Volver
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+

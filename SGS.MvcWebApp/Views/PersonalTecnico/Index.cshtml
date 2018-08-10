@@ -1,0 +1,15 @@
+﻿@{
+}
+
+<div id="personalTecnico" ng-app="sgs.personalTecnico">
+    @RenderPage(Url.Content("~/Views/PersonalTecnico/Bundle.cshtml"))
+    <div ng-view></div>
+</div>
+@section scripts{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/personalTecnico/personalTecnicoModule.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/personalTecnico/personalTecnicoListCtrl.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/personalTecnico/personalTecnicoEditCtrl.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/personalTecnico/navigationService.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/personalTecnico/personalTecnicoValidationService.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/shared/personalTecnicoService.js")"> </script>
+}

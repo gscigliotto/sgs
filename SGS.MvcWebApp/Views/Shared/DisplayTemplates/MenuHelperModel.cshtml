@@ -1,0 +1,21 @@
+﻿@model MvcSiteMapProvider.Web.Html.Models.MenuHelperModel
+@using System.Web.Mvc.Html
+@using MvcSiteMapProvider.Web.Html.Models
+@using SGS.Infrastructure
+
+<ul id="menu">
+    @foreach (var node in Model.Nodes) { 
+        <li class="@Html.MenuItemClass(node.Action, node.Controller, node.Children.Any())">            
+            @if (node.Children.Any())
+            {
+                <a href="#"><i class="@node.Attributes["Class"]"></i> <span class="menu-item-parent">@node.Title</span></a>
+                @Html.DisplayFor(m => node.Children)
+            }
+            else
+            {
+                <a title="@node.Title" href="@Url.Action(node.Action, node.Controller)"><i class="@node.Attributes["Class"]"></i> <span class="menu-item-parent">@node.Title</span></a>
+            }
+            
+        </li>
+    }
+</ul>

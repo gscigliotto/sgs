@@ -1,0 +1,90 @@
+﻿@{
+    Layout = null;
+}
+
+
+<section id="widget-grid" class="">
+    @*<article class="col-xs-12 col-sm-6 col-md-6 col-lg-12">
+            <div class="jarviswidget" id="wid-id-23" data-widget-colorbutton="false" data-widget-fullscreenbutton="false" data-widget-editbutton="false" data-widget-deletebutton="false" data-widget-custombutton="false" data-widget-sortable="false">
+                <header>
+                    <span class="widget-icon"> <i class="fa fa-eye"></i> </span>
+                    <h2>Filtros de búsqueda</h2>
+                </header>
+                <div>
+                    <div class="widget-body">
+                        <form class="form-horizontal" novalidate="novalidate" role="form">
+                            <fieldset>
+                                <div class="form-group col col-5">
+                                    <label for="nick" class="col-md-1 control-label">Nick</label>
+                                    <div class="col-md-3">
+                                        <input class="form-control default-control" type="text" name="nick" ng-model="filter.nick">
+                                    </div>
+                                    <label for="mail" class="col-md-1 control-label">Mail</label>
+                                    <div class="col-md-3">
+                                        <input class="form-control default-control" type="text" name="mail" ng-model="filter.mail">
+                                    </div>
+                                </div>
+                                <div class="form-group col col-5">
+                                    <label for="nombre" class="col-md-1 control-label">Nombre</label>
+                                    <div class="col-md-3">
+                                        <input class="form-control default-control" type="text" name="nombre" ng-model="filter.nombre">
+                                    </div>
+                                    <label for="apellido" class="col-md-1 control-label">Apellido</label>
+                                    <div class="col-md-3">
+                                        <input class="form-control default-control" type="text" name="apellido" ng-model="filter.apellido">
+                                    </div>
+                                </div>
+                                <div class="form-group col col-5">
+                                    <label for="documento" class="col-md-1 control-label">Documento</label>
+                                    <div class="col-md-3">
+                                        <input class="form-control default-control" type="text" name="documento" ng-model="filter.documento">
+                                    </div>
+                                    <label for="cuit" class="col-md-1 control-label">Cuit</label>
+                                    <div class="col-md-3">
+                                        <input class="form-control default-control" type="text" name="cuit" ng-model="filter.cuit" ui-mask="99-99999999-9">
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="form-actions">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button class="btn btn-default" ng-click="cleanFilter()">
+                                            Limpiar
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </article>*@
+
+    <article class="col-xs-12 col-sm-6 col-md-6 col-lg-12">
+        <div class="row">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-12 text-right">
+                <a href="javascript:void(0);" class="btn btn-primary" ng-click="create()">Nuevo</a>
+            </div>
+        </div>
+        <br />
+        <div class="jarviswidget" id="wid-id-222220" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-custombutton="false" data-widget-collapsed="false" data-widget-sortable="false">
+            <header>
+                <h2>Personal técnico</h2>
+            </header>
+            <div>
+                <div class="widget-body">
+                    <div class="row">
+                        <div class="input-group" style=" margin: 0  14px 13px;">
+                            <span class="input-group-addon">
+                                <i class="fa fa-search"></i>
+                            </span>
+                            <input class="form-control" placeholder="" type="text" aria-controls="dt_basic" ng-model="filter.value">
+                        </div>
+                    </div>
+                    <div class="gridStyleDefault" ng-grid="gridOptions"></div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+

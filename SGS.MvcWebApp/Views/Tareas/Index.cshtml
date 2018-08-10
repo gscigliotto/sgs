@@ -1,0 +1,17 @@
+﻿@{
+}
+
+<div id="tareas" ng-app="sgs.tareas">
+    @RenderPage(Url.Content("~/Views/Tareas/Bundle.cshtml"))
+    <div ng-view></div>
+</div>
+@section scripts{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/tareas/tareasModule.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/tareas/tareasListCtrl.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/tareas/tareasEditCtrl.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/tareas/navigationService.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/tareas/tareasValidationService.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/shared/tareasService.js")"> </script>    
+}
+
+

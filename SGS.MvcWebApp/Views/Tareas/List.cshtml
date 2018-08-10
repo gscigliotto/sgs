@@ -1,0 +1,33 @@
+﻿@{
+    Layout = null;
+}
+
+<section id="widget-grid" class="">   
+    <article class="col-xs-12 col-sm-6 col-md-6 col-lg-12">
+        <div class="row">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-12 text-right">
+                <a href="javascript:void(0);" class="btn btn-primary" ng-click="create()">Nuevo</a>
+            </div>
+        </div>
+        <br />
+        <div class="jarviswidget" id="wid-id-123" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-custombutton="false" data-widget-collapsed="false" data-widget-sortable="false">
+            <header>
+                <h2>Tareas</h2>
+            </header>
+            <div>
+                <div class="widget-body">
+                    <div class="row">
+                        <div class="input-group" style=" margin: 0  14px 13px;">
+                            <span class="input-group-addon">
+                                <i class="fa fa-search"></i>
+                            </span>
+                            <input class="form-control" placeholder="" type="text" aria-controls="dt_basic" ng-model="filter.value">
+                        </div>
+                    </div>
+                    <div class="gridStyleDefault" ng-grid="gridOptions"></div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+

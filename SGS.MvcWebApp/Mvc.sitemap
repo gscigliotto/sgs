@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
+
+  <mvcSiteMapNode title="Home" controller="Home" action="Index2">
+    <mvcSiteMapNode title="Incio" controller="Home" action="Index" Class="fa fa-lg fa-fw fa-home"/>
+    <mvcSiteMapNode title="Seguridad" controller="Security" action="index" Class="fa fa-lg fa-fw fa-key">
+      <mvcSiteMapNode title="Roles" controller="Security" action="Roles" />
+      <mvcSiteMapNode title="usuarios" controller="Security" action="Usuarios" />
+    </mvcSiteMapNode>    
+    <mvcSiteMapNode title="Personal Técnico" controller="PersonalTecnico" action="Index" Class="fa fa-lg fa-fw fa-male"/>
+    <mvcSiteMapNode title="Venues" controller="Venues" action="Index" Class="fa fa-lg fa-fw fa-building"/>
+    <mvcSiteMapNode title="Clientes" controller="Clientes" action="Index" Class="fa fa-lg fa-fw  fa-group"/>
+    <mvcSiteMapNode title="Tareas" controller="Tareas" action="Index" Class="fa fa-lg fa-fw  fa-tasks"/>
+    <mvcSiteMapNode title="Calendario" controller="Calendario" action="Index" Class="fa fa-lg fa-fw  fa-calendar"/>
+  </mvcSiteMapNode>
+
+</mvcSiteMap>

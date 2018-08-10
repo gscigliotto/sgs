@@ -1,0 +1,17 @@
+﻿@{    
+}
+
+<div id="users" ng-app="sgs.security.usuarios">
+    @RenderPage(Url.Content("~/Views/Security/Bundle.cshtml"))    
+    <div ng-view></div>
+</div>
+@section scripts{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/usuarios/usuariosModule.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/usuarios/usuariosListCtrl.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/usuarios/usuariosEditCtrl.js")"> </script>    
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/usuarios/navigationService.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/usuarios/usuarioValidationService.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/shared/securityService.js")"> </script>                  
+}
+
+

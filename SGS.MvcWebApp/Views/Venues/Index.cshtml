@@ -1,0 +1,20 @@
+﻿@{
+}
+
+<div id="venues" ng-app="sgs.venues">
+    @RenderPage(Url.Content("~/Views/Venues/Bundle.cshtml"))
+    <div ng-view></div>
+</div>
+@section scripts{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/venues/venuesModule.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/venues/venuesListCtrl.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/venues/venuesEditCtrl.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/venues/navigationService.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/venues/venuesValidationService.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/app/shared/venuesService.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/plugin/dropzone/dropzone.min.js")"> </script>    
+    
+    <script>
+        Dropzone.autoDiscover = false;
+    </script>   
+}

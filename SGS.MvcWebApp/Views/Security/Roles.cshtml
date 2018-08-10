@@ -1,0 +1,28 @@
+﻿@using System.Collections.Specialized
+@{
+    ViewBag.Title = "Roles";
+}
+<div ng-app="sgs.security.roles" ng-controller="listCtrl">
+    <section id="widget-grid" class="">
+        <article class="col-xs-12 col-sm-6 col-md-6 col-lg-12">
+            <div class="jarviswidget" id="wid-id-0" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false"  data-widget-custombutton="false" data-widget-collapsed="false" data-widget-sortable="false">
+                <header>
+                    <h2>Listado de Roles</h2>
+                </header>
+                <div>
+                    <div class="widget-body">
+                        <div class="gridStyleDefault" ng-grid="gridOptions"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+</div>
+
+@section Scripts{
+    <script src="@Url.Content("~/Scripts/app/roles/rolesModule.js")"></script>
+    <script src="@Url.Content("~/Scripts/app/roles/rolesListCtrl.js")"></script>
+    <script src="@Url.Content("~/Scripts/app/shared/securityService.js")"></script>
+}
+
+

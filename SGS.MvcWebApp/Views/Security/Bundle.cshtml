@@ -1,0 +1,14 @@
+﻿@{
+    Layout = null;
+}
+@*//SECTIONS*@
+<script type="text/ng-template" id="usuarios/list">
+    @RenderPage(Url.Content("~/Views/Security/UsuariosList.cshtml"))
+</script>
+<script type="text/ng-template" id="usuarios/edit">
+    @RenderPage(Url.Content("~/Views/Security/UsuariosEdit.cshtml"))
+</script>
+@*//GRID TEMPLATES*@
+<script type="text/ng-template" id="gridActions">
+    @RenderPage(Url.Content("~/Views/Security/GridActions.cshtml"))
+</script>

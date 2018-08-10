@@ -1,0 +1,193 @@
+﻿@{
+    Layout = null;
+}
+
+<section id="widget-grid" class="">
+    <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="jarviswidget" id="wid-id-100" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-custombutton="false" data-widget-collapsed="false" data-widget-sortable="false">
+
+            <header role="heading">
+                <span class="widget-icon"> <i class="fa fa-edit"></i> </span>
+                <h2>{{operation}}</h2>
+            </header>
+            <div role="content">
+                <div class="widget-body">
+                    <ul id="myTab1" class="nav nav-tabs bordered">
+                        <li class="active">
+                            <a href="#s1" target="_self" data-toggle="tab">Detalle</a>
+                        </li>
+                        <li>
+                            <a href="#s2" target="_self" data-toggle="tab">Archivos Técnicos </a>
+                        </li>
+                        <li>
+                            <a href="#s3" target="_self" data-toggle="tab">Archivos Mecánicos </a>
+                        </li>
+                        <li>
+                            <a href="#s4" target="_self" data-toggle="tab">Archivos eléctricos </a>
+                        </li>
+                    </ul>
+
+                    <div id="myTabContent1" class="tab-content padding-10">
+                        <div class="tab-pane fade in active" id="s1">
+                            <form class="form-horizontal" novalidate="novalidate" role="form" id="venuesForm" name="venuesForm">
+                                <fieldset>
+                                    <legend>Datos básicos</legend>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Denominación</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control " type="text" name="denominacion" ng-model="entity.denominacion">
+                                            <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Dirección principal</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control " type="text" name="direccionPrincipal" ng-model="entity.direccionPrincipal">
+                                            <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Dirección entrega proveedores</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control " type="text" name="direccionEntregaProveedores" ng-model="entity.direccionEntregaProveedores">
+                                            <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Contacto de referencia</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control " type="text" name="contactoReferencia" ng-model="entity.contactoReferencia">
+                                            <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Telefono de contacto</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control " type="text" name="telefonoContacto" ng-model="entity.telefonoContacto">
+                                            <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Email de contacto</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control " type="text" name="emailContacto" ng-model="entity.emailContacto">
+                                            <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Email de empresa seguridad</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control " type="text" name="emailEmpresaSeguridad" ng-model="entity.emailEmpresaSeguridad">
+                                            <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Tipo de establecimiento</label>
+                                        <div class="col-md-10">
+                                            <select name="tipoEstablecimiento" ng-model="entity.tipoEstablecimiento" ng-options="tipoEstablecimiento for tipoEstablecimiento in tipoEstablecimientoList" class="form-control ">
+                                                <option value=""></option>
+                                            </select>
+                                            <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Encomiendas</label>
+                                        <div class="col-md-10">
+                                            <textarea class="form-control " name="encomienda" ng-model="entity.encomienda"></textarea>
+                                            <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+
+                                <fieldset>
+                                    <legend>Información técnica</legend>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Detalles</label>
+                                        <div class="col-md-10">
+                                            <textarea class="form-control " name="informacionTecnica" ng-model="entity.informacionTecnica"></textarea>
+                                            <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Información mecánica</legend>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Detalles</label>
+                                        <div class="col-md-10">
+                                            <textarea class="form-control " name="informacionMecanica" ng-model="entity.informacionMecanica"></textarea>
+                                            <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Información eléctrica</legend>
+                                    <div class="form-group">
+                                        <label class="col-md-2 control-label">Detalles</label>
+                                        <div class="col-md-10">
+                                            <textarea class="form-control " name="informacionElectrica" ng-model="entity.informacionElectrica"></textarea>
+                                            <span style="display: none;" class="help-block"><i style="padding-right:  5px;" class="fa fa-warning"></i> </span>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <div class="alert alert-danger fade in" ng-show="result.hasErrors">
+                                    <i class="fa-fw fa fa-times"></i>
+                                    {{result.messages[0]}}
+                                </div>
+
+                                <div class="form-actions">
+                                    <div class="row">
+                                        <div class="col-md-12" >
+                                            <button class="btn btn-primary" type="submit">
+                                                <i class="fa fa-save"></i>
+                                                Guardar
+                                            </button>
+                                            <button class="btn btn-default" ng-click="list()">
+                                                Volver
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="tab-pane fade" id="s2">
+                            <div id="infoTecnicaErrors" style="display: none;" class="alert alert-danger fade in"></div>
+
+                            <form action="@Url.Action("UploadInfoTecnicaFile")" method="post" id="infoTecnicaDropzone" enctype="multipart/form-data" class="dropzone" style="">
+                                <input name="venueId" type="hidden" ng-value="entity.id" />
+                                <div class="fallback">
+                                    <input name="file" type="file" />                                   
+                                    <input type="submit" value="Upload" />
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="s3">
+                            <div id="infoMecanicaErrors" style="display: none;" class="alert alert-danger fade in"></div>
+                            <form action="@Url.Action("UploadInfoMecanicaFile")" method="post" id="infoMecanicaDropzone" enctype="multipart/form-data" class="dropzone" style="">
+                                <input name="venueId" type="hidden" ng-value="entity.id" />
+                                <div class="fallback">
+                                    <input name="file" type="file" />
+                                    <input type="submit" value="Upload" />
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="s4">
+                            <div id="infoElectricaErrors" style="display: none;" class="alert alert-danger fade in"></div>
+                            <form action="@Url.Action("UploadInfoElectricaFile")" method="post" id="infoElectricaDropzone" enctype="multipart/form-data" class="dropzone" style="">
+                                <input name="venueId" type="hidden" ng-value="entity.id" />
+                                <div class="fallback">
+                                    <input name="file" type="file" />
+                                    <input type="submit" value="Upload" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+

@@ -1,0 +1,89 @@
+﻿@using SGS.Dtos
+@model IList<SGS.Dtos.Tarea>
+<article class="col-sm-12 col-md-12 col-lg-6 sortable-grid ui-sortable">
+
+    <div class="jarviswidget jarviswidget-color-blue jarviswidget-sortable" id="wid-id-4" role="widget" style="">
+
+        <header role="heading">
+            <div class="jarviswidget-ctrls" role="menu">   <a href="#" class="button-icon jarviswidget-toggle-btn" rel="tooltip" title="" data-placement="bottom" data-original-title="Collapse"><i class="fa fa-minus "></i></a> <a href="javascript:void(0);" class="button-icon jarviswidget-fullscreen-btn" rel="tooltip" title="" data-placement="bottom" data-original-title="Fullscreen"><i class="fa fa-resize-full "></i></a> <a href="javascript:void(0);" class="button-icon jarviswidget-delete-btn" rel="tooltip" title="" data-placement="bottom" data-original-title="Delete"><i class="fa fa-times"></i></a></div>
+            <span class="widget-icon"> <i class="fa fa-check txt-color-white"></i> </span>
+            <h2> Tareas </h2>         
+            <span class="jarviswidget-loader"><i class="fa fa-refresh fa-spin"></i></span>
+        </header>
+
+        <!-- widget div-->
+        <div role="content">
+            <!-- widget edit box -->
+            <div class="jarviswidget-editbox">
+                <div>
+                    <label>Title:</label>
+                    <input type="text">
+                </div>
+            </div>
+            <!-- end widget edit box -->
+
+            <div class="widget-body no-padding smart-form">
+                <!-- content goes here -->
+                <h5 class="todo-group-title"><i class="fa fa-warning"></i> Tareas críticas (<small class="num-of-tasks">@Model.Count(t => string.Equals(t.Prioridad, "Alta"))</small>)</h5>
+                <ul id="sortable1" class="todo ui-sortable"  >
+                   @foreach (var tarea in Model.Where(t => string.Equals(t.Prioridad, "Alta")))
+                    {
+                        <li class="alert alert-danger alert-block" style="background: #c26565;">
+                            <span class="handle">
+                                <label class="checkbox">
+                                    @*<input type="checkbox" name="checkbox-inline">*@
+                                    <i></i>
+                                </label>
+                            </span>
+                            <p style="color: #ffffff; font-weight: bold;">
+                                <strong style="color: #ffffff; font-weight: bold;"><a   href="@string.Format("{0}#/edit/{1}", Url.Action("Index", "Tareas"), tarea.Id)">Ticket @tarea.Id</a></strong> - @tarea.Titulo  <span class="text-muted" style="color: #ffffff; font-weight: bold;">@tarea.Descripcion </span>
+                                <span class="date" style="color: #ffffff; font-weight: bold;">@tarea.FechaVencimiento.Value.ToString("dd/MM/yyyy")</span>
+                            </p>
+                        </li>
+                    }
+                                    </ul>
+                <h5 class="todo-group-title"><i class="fa fa-exclamation"></i> Tareas importantes (<small class="num-of-tasks">@Model.Count(t => string.Equals(t.Prioridad, "Media"))</small>)</h5>
+                <ul id="sortable2" class="todo ui-sortable">
+                    @foreach (var tarea in Model.Where(t => string.Equals(t.Prioridad, "Media")))
+                    {
+                        <li class="alert alert-block alert-warning" style="background: #efe1b3">
+                            <span class="handle">
+                                <label class="checkbox">
+                                    @*<input type="checkbox" name="checkbox-inline">*@
+                                    <i></i>
+                                </label>
+                            </span>
+                            <p>
+                                <strong><a href="@string.Format("{0}#/edit/{1}", Url.Action("Index", "Tareas"), tarea.Id)">Ticket @tarea.Id</a></strong> - @tarea.Titulo  <span class="text-muted">@tarea.Descripcion </span>
+                                <span class="date">@tarea.FechaVencimiento.Value.ToString("dd/MM/yyyy")</span>
+                            </p>
+                        </li>
+                    }
+                </ul>
+                <h5 class="todo-group-title"><i class="fa fa-warning"></i> Tareas no importantes (<small class="num-of-tasks">@Model.Count(t => string.Equals(t.Prioridad, "Baja"))</small>)</h5>
+                <ul id="sortable1" class="todo ui-sortable">
+                    @foreach (var tarea in Model.Where(t => string.Equals(t.Prioridad, "Baja")))
+                    {
+                        <li class="alert alert-success alert-block" style="background: #cde0c4">
+                            <span class="handle">
+                                <label class="checkbox">
+                                    @*<input type="checkbox" name="checkbox-inline">*@
+                                    <i></i>
+                                </label>
+                            </span>
+                            <p>
+                                <strong><a href="@string.Format("{0}#/edit/{1}", Url.Action("Index", "Tareas"), tarea.Id)">Ticket @tarea.Id</a></strong> - @tarea.Titulo  <span class="text-muted">@tarea.Descripcion </span>
+                                <span class="date">@tarea.FechaVencimiento.Value.ToString("dd/MM/yyyy")</span>
+                            </p>
+                        </li>
+                    }
+                 </ul>
+               
+
+                <!-- end content -->
+            </div>
+
+        </div>
+        <!-- end widget div -->
+    </div>
+</article>
